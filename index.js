@@ -32,8 +32,13 @@ async function checkBadgeUpdates() {
       throw new Error('Access token not found.');
     }
 
-    console.log('Checking for new badges...');
-
+    //console.log('Checking for new badges...');
+    try {
+   console.log('Checking for new badges...');
+   await axios.post(webhookUrl, { content: '```Just Saying Im still online, Mute this chat I will send a lot of checkups```' });
+  } catch (error) {
+    console.error('Error sending initial Discord notification:', error.message);
+  }
     const response = await axios.get(badgesUrl, {
       headers: {
         'Client-ID': clientId,
@@ -69,7 +74,7 @@ async function sendDiscordNotification(message, roleId) {
 
 async function sendInitialDiscordNotification() {
   try {
-    await axios.post(webhookUrl, { content: 'BadgeBOT is online.' });
+    await axios.post(webhookUrl, { content: 'HXS.Badge.BOT is online.' });
   } catch (error) {
     console.error('Error sending initial Discord notification:', error.message);
   }
@@ -90,4 +95,4 @@ sendInitialDiscordNotification();
 runBadgeChecker();
 
 // Call the runBadgeChecker function every minute (adjust as needed)
-setInterval(runBadgeChecker, 60000);
+setInterval(runBadgeChecker, 900000);
