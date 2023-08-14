@@ -1,6 +1,6 @@
 module.exports = {
-  clientId: 'YOUR_TWITCH_CLIENT_ID', // Replace with your Twitch client ID
-  clientSecret: 'YOUR_TWITCH_CLIENT_SECRET', // Replace with your Twitch client secret
-  roleId: 'YOUR_DISCORD_ROLE_ID', // Replace with the actual role ID you want to mention
-  webhookUrl: 'YOUR_DISCORD_WEBHOOK_URL' // Replace with your Discord webhook URL
+  clientId: 'hk3y7du9ciwbazgl93dfsyfvmj2lpy', // Replace with your Twitch client ID
+  clientSecret: '9pl18ra4zzq74wiz3tjfqbuso7ckcb', // Replace with your Twitch client secret
+  roleId: '981367277490409532', // Replace with the actual role ID you want to mention
+  webhookUrl: 'https://discord.com/api/webhooks/1139204955715141752/d-bIDcCKYMtOUqQV0bSBArNoHOdytVAmLPSvhqLxKmn15_ubFwMDKhoDxy6R-uPuO4PO' // Replace with your Discord webhook URL
 };
